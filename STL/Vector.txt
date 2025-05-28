@@ -1,0 +1,42 @@
+Vector- Time Complexities
+
+| Method                             | Description                          | Time Complexity                         |
+| ---------------------------------- | ------------------------------------ | --------------------------------------- |
+| `v.size()`                         | Number of elements                   | **O(1)**                                |
+| `v.empty()`                        | Check if empty                       | **O(1)**                                |
+| `v.capacity()`                     | Allocated memory size                | **O(1)**                                |
+| `v.max_size()`                     | Max elements vector can hold         | **O(1)**                                |
+| `v.reserve(n)`                     | Pre-allocate memory                  | **O(n)** (only if reallocation occurs)  |
+| `v.shrink_to_fit()`                | Reduce capacity to size              | **O(n)**                                |
+| `v.clear()`                        | Removes all elements                 | **O(n)**                                |
+| `v.resize(n)`                      | Resize to `n` elements               | **O(n)**                                |
+| `v.assign(n, val)`                 | Replace all with `n` copies of `val` | **O(n)**                                |
+| `v.assign(first, last)`            | Assign range                         | **O(n)**                                |
+| `v.at(i)`                          | Access with bounds checking          | **O(1)**                                |
+| `v[i]` or `v.front()` / `v.back()` | Direct access                        | **O(1)**                                |
+| `v.push_back(val)`                 | Add element at end                   | **Amortized O(1)**, worst-case **O(n)** |
+| `v.pop_back()`                     | Remove last element                  | **O(1)**                                |
+| `v.insert(pos, val)`               | Insert at position                   | **O(n)**                                |
+| `v.insert(pos, n, val)`            | Insert `n` copies at pos             | **O(n)**                                |
+| `v.insert(pos, first, last)`       | Insert range                         | **O(n)**                                |
+| `v.erase(pos)`                     | Erase one element                    | **O(n)**                                |
+| `v.erase(first, last)`             | Erase range                          | **O(n)**                                |
+| `v.swap(other)`                    | Swap contents with another vector    | **O(1)**                                |
+| `v.begin(), v.end()`               | Iterators to first/after last        | **O(1)**                                |
+| `v.rbegin(), v.rend()`             | Reverse iterators                    | **O(1)**                                |
+| `v.data()`                         | Pointer to underlying array          | **O(1)**                                |
+| `v.emplace_back(args...)`          | Construct and insert at end          | **Amortized O(1)**                      |
+| `v.emplace(pos, args...)`          | Construct in-place at pos            | **O(n)**                                |
+
+
+
+Summary:-
+
+| Operation Type                 | Time Complexity    |
+| ------------------------------ | ------------------ |
+| Access (via `[]`, `at()`)      | **O(1)**           |
+| Insert/Delete at end           | **Amortized O(1)** |
+| Insert/Delete in middle        | **O(n)**           |
+| Search (linear, unless sorted) | **O(n)**           |
+| Resize, clear, assign          | **O(n)**           |
+| Iteration                      | **O(n)**           |
