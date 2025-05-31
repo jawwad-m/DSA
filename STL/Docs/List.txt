@@ -1,0 +1,54 @@
+| Function     | Description                                       | Time Complexity |
+| ------------ | ------------------------------------------------- | --------------- |
+| `list()`     | Default constructor                               | O(1)            |
+| `list(n)`    | Create list with `n` default-initialized elements | O(n)            |
+| `size()`     | Returns number of elements                        | O(1)            |
+| `empty()`    | Checks if list is empty                           | O(1)            |
+| `max_size()` | Maximum number of elements the list can hold      | O(1)            |
+
+Element Access
+| Function  | Description          | Time Complexity |
+| --------- | -------------------- | --------------- |
+| `front()` | Access first element | O(1)            |
+| `back()`  | Access last element  | O(1)            |
+
+Iterators
+| Function              | Description                      | Time Complexity |
+| --------------------- | -------------------------------- | --------------- |
+| `begin()` / `end()`   | Return iterator to beginning/end | O(1)            |
+| `rbegin()` / `rend()` | Return reverse iterator          | O(1)            |
+
+Modifiers
+| Function                 | Description                          | Time Complexity |
+| ------------------------ | ------------------------------------ | --------------- |
+| `push_front(val)`        | Insert at front                      | O(1)            |
+| `push_back(val)`         | Insert at end                        | O(1)            |
+| `pop_front()`            | Remove first element                 | O(1)            |
+| `pop_back()`             | Remove last element                  | O(1)            |
+| `insert(pos, val)`       | Insert before `pos`                  | O(1)            |
+| `erase(pos)`             | Erase at `pos`                       | O(1)            |
+| `clear()`                | Removes all elements                 | O(n)            |
+| `resize(n)`              | Resizes list to contain `n` elements | O(n)            |
+| `assign(n, val)`         | Replaces contents                    | O(n)            |
+| `emplace(pos, args...)`  | Construct element in-place at `pos`  | O(1)            |
+| `emplace_front(args...)` | Construct element in-place at front  | O(1)            |
+| `emplace_back(args...)`  | Construct element in-place at back   | O(1)            |
+| `remove(val)`            | Remove all elements equal to `val`   | O(n)            |
+| `remove_if(pred)`        | Remove elements satisfying predicate | O(n)            |
+
+Operations
+| Function             | Description                         | Time Complexity         |
+| -------------------- | ----------------------------------- | ----------------------- |
+| `merge(other_list)`  | Merge sorted lists                  | O(n)                    |
+| `sort()`             | Sort the list                       | O(n log n)              |
+| `reverse()`          | Reverse the list                    | O(n)                    |
+| `unique()`           | Remove consecutive duplicates       | O(n)                    |
+| `splice(pos, other)` | Transfer elements from another list | O(1) (no copy involved) |
+
+Comparison
+| Function                         | Description       | Time Complexity |
+| -------------------------------- | ----------------- | --------------- |
+| `==`, `!=`, `<`, `<=`, `>`, `>=` | Compare two lists | O(n)            |
+
+
+

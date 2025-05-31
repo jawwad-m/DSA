@@ -1,0 +1,47 @@
+Capacity Functions
+| Function          | Description                     | Time Complexity               |
+| ----------------- | ------------------------------- | ----------------------------- |
+| `size()`          | Returns number of elements      | O(1)                          |
+| `empty()`         | Checks if deque is empty        | O(1)                          |
+| `max_size()`      | Max elements the deque can hold | O(1)                          |
+| `shrink_to_fit()` | Reduces capacity to fit size    | O(n) (implementation-defined) |
+| `resize(n)`       | Changes the size                | O(n)                          |
+
+Element Access
+| Function     | Description                 | Time Complexity |
+| ------------ | --------------------------- | --------------- |
+| `at(index)`  | Access with bounds check    | O(1)            |
+| `operator[]` | Access without bounds check | O(1)            |
+| `front()`    | Access first element        | O(1)            |
+| `back()`     | Access last element         | O(1)            |
+
+Modifiers
+| Function                 | Description                      | Time Complexity |
+| ------------------------ | -------------------------------- | --------------- |
+| `push_front(val)`        | Insert at front                  | O(1) amortized  |
+| `push_back(val)`         | Insert at back                   | O(1) amortized  |
+| `pop_front()`            | Remove from front                | O(1) amortized  |
+| `pop_back()`             | Remove from back                 | O(1) amortized  |
+| `insert(pos, val)`       | Insert before position           | O(n)            |
+| `erase(pos)`             | Remove at position               | O(n)            |
+| `clear()`                | Remove all elements              | O(n)            |
+| `assign(n, val)`         | Assign new values                | O(n)            |
+| `emplace(pos, args...)`  | Construct in-place at pos        | O(n)            |
+| `emplace_front(args...)` | Construct in-place at front      | O(1) amortized  |
+| `emplace_back(args...)`  | Construct in-place at back       | O(1) amortized  |
+| `swap(other)`            | Swap contents with another deque | O(1)            |
+
+Iterators
+| Function   | Description                      | Time Complexity |
+| ---------- | -------------------------------- | --------------- |
+| `begin()`  | Iterator to first element        | O(1)            |
+| `end()`    | Iterator to past-the-end         | O(1)            |
+| `rbegin()` | Reverse iterator to last element | O(1)            |
+| `rend()`   | Reverse iterator to before first | O(1)            |
+
+Relational Operators
+| Operator             | Description                 | Time Complexity |
+| -------------------- | --------------------------- | --------------- |
+| `==`, `!=`           | Equality / inequality check | O(n)            |
+| `<`, `>`, `<=`, `>=` | Lexicographical compare     | O(n)            |
+

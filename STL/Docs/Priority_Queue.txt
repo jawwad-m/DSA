@@ -1,0 +1,20 @@
+Capacity Functions
+| Function  | Description                  | Time Complexity |
+| --------- | ---------------------------- | --------------- |
+| `empty()` | Checks if the queue is empty | O(1)            |
+| `size()`  | Returns number of elements   | O(1)            |
+
+Element Access
+| Function | Description                | Time Complexity |
+| -------- | -------------------------- | --------------- |
+| `top()`  | Access the largest element | O(1)            |
+
+Modifiers
+| Function           | Description                       | Time Complexity |
+| ------------------ | --------------------------------- | --------------- |
+| `push(val)`        | Insert element                    | O(log n)        |
+| `emplace(args...)` | Construct element in-place        | O(log n)        |
+| `pop()`            | Remove top element                | O(log n)        |
+| `swap(other)`      | Swap with another priority\_queue | O(1)            |
+
+

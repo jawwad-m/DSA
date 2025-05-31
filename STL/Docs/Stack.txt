@@ -1,0 +1,16 @@
+Member Functions and Time Complexities
+| Function           | Description                        | Time Complexity |
+| ------------------ | ---------------------------------- | --------------- |
+| `empty()`          | Checks if the stack is empty       | O(1)            |
+| `size()`           | Returns number of elements         | O(1)            |
+| `top()`            | Access the top element             | O(1)            |
+| `push(val)`        | Pushes element on top              | O(1) amortized  |
+| `pop()`            | Removes top element                | O(1)            |
+| `emplace(args...)` | Constructs element in-place on top | O(1) amortized  |
+| `swap(other)`      | Swaps contents with another stack  | O(1)            |
+
+Relational Operators
+| Operator             | Description                | Time Complexity |
+| -------------------- | -------------------------- | --------------- |
+| `==`, `!=`           | Checks equality/inequality | O(n)            |
+| `<`, `<=`, `>`, `>=` | Lexicographical comparison | O(n)            |

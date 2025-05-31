@@ -1,0 +1,39 @@
+Capacity Functions
+| Function     | Description                   | Time Complexity |
+| ------------ | ----------------------------- | --------------- |
+| `size()`     | Returns number of elements    | O(1)            |
+| `empty()`    | Checks if set is empty        | O(1)            |
+| `max_size()` | Max elements the set can hold | O(1)            |
+
+Modifiers| Function           | Description                           | Time Complexity |
+| ------------------ | ------------------------------------- | --------------- |
+| `insert(val)`      | Inserts element (only if not present) | O(log n)        |
+| `emplace(args...)` | Constructs element in-place           | O(log n)        |
+| `erase(val)`       | Erase by value                        | O(log n)        |
+| `erase(iterator)`  | Erase by iterator                     | O(log n)        |
+| `clear()`          | Removes all elements                  | O(n)            |
+| `swap(other)`      | Swaps contents with another set       | O(1)            |
+
+Lookup / Search
+| Function           | Description                         | Time Complexity |
+| ------------------ | ----------------------------------- | --------------- |
+| `find(val)`        | Returns iterator to element         | O(log n)        |
+| `count(val)`       | Returns 1 if element exists, 0 else | O(log n)        |
+| `lower_bound(val)` | First element ≥ val                 | O(log n)        |
+| `upper_bound(val)` | First element > val                 | O(log n)        |
+| `equal_range(val)` | Pair of lower and upper bounds      | O(log n)        |
+
+Iterators
+| Function   | Description                      | Time Complexity |
+| ---------- | -------------------------------- | --------------- |
+| `begin()`  | Iterator to smallest element     | O(1)            |
+| `end()`    | Iterator to past-the-end         | O(1)            |
+| `rbegin()` | Reverse iterator to largest      | O(1)            |
+| `rend()`   | Reverse iterator to before first | O(1)            |
+
+Relational Operators
+| Operator             | Description             | Time Complexity |
+| -------------------- | ----------------------- | --------------- |
+| `==`, `!=`           | Equality/Inequality     | O(n)            |
+| `<`, `>`, `<=`, `>=` | Lexicographical compare | O(n)            |
+

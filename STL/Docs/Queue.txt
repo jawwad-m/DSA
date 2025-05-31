@@ -1,0 +1,26 @@
+Capacity Functions
+| Function  | Description                  | Time Complexity |
+| --------- | ---------------------------- | --------------- |
+| `empty()` | Checks if the queue is empty | O(1)            |
+| `size()`  | Returns number of elements   | O(1)            |
+
+Element Access
+| Function  | Description          | Time Complexity |
+| --------- | -------------------- | --------------- |
+| `front()` | Access first element | O(1)            |
+| `back()`  | Access last element  | O(1)            |
+
+Modifiers
+| Function           | Description                         | Time Complexity |
+| ------------------ | ----------------------------------- | --------------- |
+| `push(val)`        | Adds element to the back            | O(1) amortized  |
+| `emplace(args...)` | Constructs element in-place at back | O(1) amortized  |
+| `pop()`            | Removes element from the front      | O(1) amortized  |
+| `swap(other)`      | Swaps contents with another queue   | O(1)            |
+
+Relational Operators
+| Operator             | Description               | Time Complexity |
+| -------------------- | ------------------------- | --------------- |
+| `==`, `!=`           | Equality/Inequality check | O(n)            |
+| `<`, `>`, `<=`, `>=` | Lexicographical compare   | O(n)            |
+
