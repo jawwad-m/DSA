@@ -1,0 +1,51 @@
+Time Complexity Overview
+| Operation Category               | Time Complexity |
+| -------------------------------- | --------------- |
+| Insert / Erase / Access / Search | O(log n)        |
+| Iteration (all elements)         | O(n)            |
+
+Capacity Functions
+| Function     | Description              | Time Complexity |
+| ------------ | ------------------------ | --------------- |
+| `size()`     | Number of elements       | O(1)            |
+| `empty()`    | Checks if empty          | O(1)            |
+| `max_size()` | Max elements it can hold | O(1)            |
+
+Element Access
+| Function     | Description                               | Time Complexity |
+| ------------ | ----------------------------------------- | --------------- |
+| `operator[]` | Access/inserts default value if not found | O(log n)        |
+| `at(key)`    | Access element; throws if not found       | O(log n)        |
+
+Modifiers
+| Function            | Description                     | Time Complexity |
+| ------------------- | ------------------------------- | --------------- |
+| `insert(pair)`      | Inserts key-value pair          | O(log n)        |
+| `emplace(key, val)` | Constructs in-place             | O(log n)        |
+| `erase(key)`        | Removes element by key          | O(log n)        |
+| `erase(iterator)`   | Removes element at position     | O(log n)        |
+| `clear()`           | Removes all elements            | O(n)            |
+| `swap(other)`       | Swaps contents with another map | O(1)            |
+
+Lookup / Search
+| Function           | Description                                 | Time Complexity |
+| ------------------ | ------------------------------------------- | --------------- |
+| `find(key)`        | Iterator to element or `end()` if not found | O(log n)        |
+| `count(key)`       | Returns 1 if key exists, else 0             | O(log n)        |
+| `lower_bound(key)` | Iterator to first element ≥ key             | O(log n)        |
+| `upper_bound(key)` | Iterator to first element > key             | O(log n)        |
+| `equal_range(key)` | Pair of lower and upper bounds              | O(log n)        |
+
+Iterators
+| Function   | Description                      | Time Complexity |
+| ---------- | -------------------------------- | --------------- |
+| `begin()`  | Iterator to first (smallest)     | O(1)            |
+| `end()`    | Iterator to past-the-end         | O(1)            |
+| `rbegin()` | Reverse iterator to largest      | O(1)            |
+| `rend()`   | Reverse iterator before smallest | O(1)            |
+
+Relational Operators
+| Operator             | Description                | Time Complexity |
+| -------------------- | -------------------------- | --------------- |
+| `==`, `!=`           | Equality/Inequality        | O(n)            |
+| `<`, `>`, `<=`, `>=` | Lexicographical comparison | O(n)            |

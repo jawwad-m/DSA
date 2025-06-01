@@ -1,0 +1,179 @@
+// === list (doubly-linked list) ===
+// Time complexities: Most operations O(1) for insert/delete using iterators
+list<int> l;
+l.push_back(x);     // O(1)
+l.push_front(x);    // O(1)
+l.pop_back();       // O(1)
+l.pop_front();      // O(1)
+l.insert(pos, val); // O(1)
+l.erase(pos);       // O(1)
+l.remove(val);      // O(n)
+l.unique();         // O(n)
+l.sort();           // O(n log n)
+l.reverse();        // O(n)
+l.merge(other);     // O(n)
+l.splice(pos, other); // O(1)
+l.size();           // O(1)
+l.empty();          // O(1)
+
+
+// === stack ===
+// Time complexity: All operations O(1)
+stack<int> s;
+s.push(x);          // O(1)
+s.pop();            // O(1)
+s.top();            // O(1)
+s.empty();          // O(1)
+s.size();           // O(1)
+
+
+// === deque (double-ended queue) ===
+// Time complexity: All operations O(1) amortized
+deque<int> dq;
+dq.push_back(x);    // O(1)
+dq.push_front(x);   // O(1)
+dq.pop_back();      // O(1)
+dq.pop_front();     // O(1)
+dq[i];              // O(1)
+dq.size();          // O(1)
+dq.empty();         // O(1)
+
+
+// === queue (FIFO) ===
+// Time complexity: All operations O(1)
+queue<int> q;
+q.push(x);          // O(1)
+q.pop();            // O(1)
+q.front();          // O(1)
+q.back();           // O(1)
+q.size();           // O(1)
+q.empty();          // O(1)
+
+
+// === priority_queue (max heap by default) ===
+// Time complexity: push/pop/top O(log n)
+priority_queue<int> pq;
+pq.push(x);         // O(log n)
+pq.pop();           // O(log n)
+pq.top();           // O(1)
+pq.size();          // O(1)
+pq.empty();         // O(1)
+
+
+// === set (unique, sorted keys) ===
+// Time complexity: All insert/delete/search operations O(log n)
+set<int> st;
+st.insert(x);       // O(log n)
+st.erase(x);        // O(log n)
+st.find(x);         // O(log n)
+st.count(x);        // O(log n)
+st.lower_bound(x);  // O(log n)
+st.upper_bound(x);  // O(log n)
+st.equal_range(x);  // O(log n)
+st.size();          // O(1)
+st.empty();         // O(1)
+
+
+// === multiset (allows duplicates, sorted) ===
+// Time complexity: Same as set
+multiset<int> ms;
+ms.insert(x);       // O(log n)
+ms.erase(x);        // O(log n + count(x))
+ms.find(x);         // O(log n)
+ms.count(x);        // O(log n + count(x))
+ms.lower_bound(x);  // O(log n)
+ms.upper_bound(x);  // O(log n)
+ms.equal_range(x);  // O(log n)
+ms.size();          // O(1)
+ms.empty();         // O(1)
+
+
+// === unordered_set (unique keys, unordered) ===
+// Time complexity: Avg O(1), Worst O(n)
+unordered_set<int> us;
+us.insert(x);       // O(1) avg
+us.erase(x);        // O(1) avg
+us.find(x);         // O(1) avg
+us.count(x);        // O(1) avg
+us.size();          // O(1)
+us.empty();         // O(1)
+us.rehash(n);       // O(n)
+us.reserve(n);      // O(n)
+
+
+// === map (key-value pairs, unique keys, sorted) ===
+// Time complexity: All operations O(log n)
+map<int, string> mp;
+mp[key] = value;    // O(log n)
+mp.at(key);         // O(log n)
+mp.insert({k, v});  // O(log n)
+mp.erase(key);      // O(log n)
+mp.find(key);       // O(log n)
+mp.count(key);      // O(log n)
+mp.lower_bound(k);  // O(log n)
+mp.upper_bound(k);  // O(log n)
+mp.equal_range(k);  // O(log n)
+mp.size();          // O(1)
+mp.empty();         // O(1)
+
+
+// === multimap (allows duplicate keys, sorted) ===
+// Time complexity: Similar to map
+multimap<int, string> mmp;
+mmp.insert({k, v});     // O(log n)
+mmp.erase(k);           // O(log n + count(k))
+mmp.find(k);            // O(log n)
+mmp.count(k);           // O(log n + count(k))
+mmp.lower_bound(k);     // O(log n)
+mmp.upper_bound(k);     // O(log n)
+mmp.equal_range(k);     // O(log n)
+mmp.size();             // O(1)
+mmp.empty();            // O(1)
+
+// === unordered_map (key-value pairs, unique keys, unordered) ===
+// Time complexity: Average O(1), Worst O(n)
+unordered_map<int, string> ump;
+
+ump[key] = val;           // O(1) avg, insert or update
+ump.at(key);              // O(1) avg, throws if key doesn't exist
+ump.insert({k, v});       // O(1) avg
+ump.erase(key);           // O(1) avg
+ump.find(key);            // O(1) avg
+ump.count(key);           // O(1) avg
+ump.size();               // O(1)
+ump.empty();              // O(1)
+ump.clear();              // O(n)
+ump.begin();              // O(1)
+ump.end();                // O(1)
+ump.bucket_count();       // O(1)
+ump.bucket(key);          // O(1)
+ump.load_factor();        // O(1)
+ump.max_load_factor();    // O(1)
+ump.rehash(n);            // O(n)
+ump.reserve(n);           // O(n)
+
+// Note: unordered_map does NOT support lower_bound(), upper_bound(), etc.
+
+
+// === unordered_multimap (allows duplicate keys, unordered) ===
+// Time complexity: Average O(1), Worst O(n)
+unordered_multimap<int, string> ummp;
+
+ummp.insert({k, v});      // O(1) avg
+ummp.erase(k);            // O(1) avg for single erase, O(n) if erasing all duplicates
+ummp.find(k);             // O(1) avg
+ummp.count(k);            // O(1) avg
+ummp.equal_range(k);      // O(1) avg
+ummp.size();              // O(1)
+ummp.empty();             // O(1)
+ummp.clear();             // O(n)
+ummp.begin();             // O(1)
+ummp.end();               // O(1)
+ummp.bucket_count();      // O(1)
+ummp.bucket(k);           // O(1)
+ummp.load_factor();       // O(1)
+ummp.max_load_factor();   // O(1)
+ummp.rehash(n);           // O(n)
+ummp.reserve(n);          // O(n)
+
+// Note: operator[] is NOT available in unordered_multimap

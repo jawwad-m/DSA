@@ -1,0 +1,52 @@
+Time Complexity Overview
+| Operation Category    | Time Complexity (Average) | Time Complexity (Worst Case) |
+| --------------------- | ------------------------- | ---------------------------- |
+| Insert / Erase / Find | O(1)                      | O(n) (if hash collisions)    |
+| Iteration             | O(n)                      | O(n)                         |
+
+Capacity Functions
+| Function         | Description                         | Time Complexity |
+| ---------------- | ----------------------------------- | --------------- |
+| `size()`         | Number of elements                  | O(1)            |
+| `empty()`        | Checks if empty                     | O(1)            |
+| `max_size()`     | Max elements container can hold     | O(1)            |
+| `bucket_count()` | Number of hash buckets              | O(1)            |
+| `load_factor()`  | Average elements per bucket         | O(1)            |
+| `rehash(n)`      | Resizes hash table to ≥ `n` buckets | O(n)            |
+| `reserve(n)`     | Reserves space for `n` elements     | O(n)            |
+
+Modifiers
+| Function           | Description                        | Avg. Time Complexity |
+| ------------------ | ---------------------------------- | -------------------- |
+| `insert(val)`      | Inserts an element (if not exists) | O(1)                 |
+| `emplace(args...)` | Constructs in-place                | O(1)                 |
+| `erase(val)`       | Removes element by value           | O(1)                 |
+| `erase(iterator)`  | Removes by iterator                | O(1)                 |
+| `clear()`          | Removes all elements               | O(n)                 |
+| `swap(other)`      | Swaps contents with another set    | O(1)                 |
+
+Lookup
+| Function           | Description                 | Avg. Time Complexity |
+| ------------------ | --------------------------- | -------------------- |
+| `find(val)`        | Returns iterator to element | O(1)                 |
+| `count(val)`       | 1 if present, else 0        | O(1)                 |
+| `equal_range(val)` | Returns a pair of iterators | O(1)                 |
+
+Iterators
+| Function  | Description               | Time Complexity |
+| --------- | ------------------------- | --------------- |
+| `begin()` | Iterator to first element | O(1)            |
+| `end()`   | Iterator to past-the-end  | O(1)            |
+
+Hash Policy & Buckets
+| Function             | Description                            | Time Complexity |
+| -------------------- | -------------------------------------- | --------------- |
+| `bucket(val)`        | Bucket number of a given value         | O(1)            |
+| `bucket_count()`     | Total number of buckets                | O(1)            |
+| `max_bucket_count()` | Maximum number of buckets              | O(1)            |
+| `load_factor()`      | Returns current load factor            | O(1)            |
+| `rehash(n)`          | Reorganizes buckets (≥ n)              | O(n)            |
+| `reserve(n)`         | Reserves at least `n` element capacity | O(n)            |
+
+Relational Operators
+Not supported (unordered_set does not support ==, <, etc.).

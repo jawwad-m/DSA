@@ -5,3 +5,11 @@
 | Time complexity    | O(log n)                   | O(log n)                 |
 | Returns            | Iterator (not index/value) | Iterator                 |
 | Safe for unsorted? | ❌ No                       | ❌ No                     |
+
+
+| Container                    | Sorted Automatically? | Use `lower_bound` / `upper_bound` safely? |
+| ---------------------------- | --------------------- | ----------------------------------------- |
+| `set`, `map`                 | ✅ Yes                 | ✅ Yes                                     |
+| `multiset`, `multimap`       | ✅ Yes                 | ✅ Yes                                     |
+| `vector`, `array`, raw array,| ❌ No                  | ❌ No — sort it first!                     |
+| `unordered_set`              |                     
