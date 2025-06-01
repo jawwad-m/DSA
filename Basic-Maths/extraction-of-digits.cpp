@@ -11,7 +11,7 @@ vector<int> getDigits() {
         n = n / 10;
     }
 
-    sort(v.begin(), v.end());
+    // sort(v.begin(), v.end(),greater<int>());// functional object (functor)
     return v;
 }
 
