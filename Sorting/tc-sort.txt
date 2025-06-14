@@ -1,0 +1,32 @@
+| Algorithm          | Best Case  | Average Case | Worst Case | Space Complexity | Stable? |
+| ------------------ | ---------- | ------------ | ---------- | ---------------- | ------- |
+| **Bubble Sort**    | O(n)       | O(n²)        | O(n²)      | O(1)             | Yes     |
+| **Insertion Sort** | O(n)       | O(n²)        | O(n²)      | O(1)             | Yes     |
+| **Selection Sort** | O(n²)      | O(n²)        | O(n²)      | O(1)             | No      |
+| **Merge Sort**     | O(n log n) | O(n log n)   | O(n log n) | O(n)             | Yes     |
+
+
+🔍 Explanation:
+Bubble Sort:
+
+-Compares adjacent elements, pushes the largest to the end in each pass.
+
+-Best case (already sorted): O(n) with a flag to detect no swaps.
+
+Insertion Sort:
+
+-Builds the sorted array one item at a time by comparing backwards.
+
+-Very efficient for small or nearly sorted datasets.
+
+Selection Sort:
+
+-Selects the minimum element and places it in correct position.
+
+-Always O(n²) since it searches full list each time.
+
+Merge Sort:
+
+-Divide and conquer approach.
+
+-Always O(n log n), but uses extra space for merging.
